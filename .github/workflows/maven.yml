@@ -25,3 +25,10 @@ jobs:
 
       - name: Build with Maven
         run: mvn test --file pom.xml
+
+      # Upload the HTML file as an artifact
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: html-report
+          path: test-output/extent-report.html

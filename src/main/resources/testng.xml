@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SampleTestSuite">
+    <test name="shopping cart">
+        <classes>
+            <class name="Tests.SeleniumGitCITests"/>
+        </classes>
+    </test>
+</suite>

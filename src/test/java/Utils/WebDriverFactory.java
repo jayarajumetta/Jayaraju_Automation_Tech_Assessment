@@ -31,7 +31,7 @@ public class WebDriverFactory {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
-//                options.addArguments("--headless");
+                options.addArguments("--headless");
                 webDriver = new ChromeDriver(options);
                 break;
             case "firefox":

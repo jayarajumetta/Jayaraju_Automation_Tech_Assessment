@@ -8,7 +8,7 @@ public class CartPage {
     private By cartItemsNumber= By.xpath("//span[@data-test='shopping-cart-badge']/parent::a");
     private By checkOutBtn = By.id("checkout");
     private By itemPriceText = By.xpath("//div[@data-test='inventory-item-price']");
-    private By removeBtn = By.id("remove");
+    private By removeBtn = By.xpath("//button[.='Remove']");
 
     private By itemName = By.xpath("//div[@data-test='inventory-item-name']");
 
@@ -36,7 +36,7 @@ public class CartPage {
 
     public void waitForCartItemToBeClearedOut(){
         SeleniumUtil.waitForElementToBeInVisible(itemName);
-        SeleniumUtil.waitForElementToBeVisible(removeBtn);
+        SeleniumUtil.waitForElementToBeInVisible(removeBtn);
     }
 }
 

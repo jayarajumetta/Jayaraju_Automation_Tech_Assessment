@@ -90,8 +90,8 @@ public class SeleniumGitCITests
         Float itemPrice =  productPage.getItemPrice();
         Assert.assertEquals(itemPrice,productPrice);
         productPage.clickOnAddToCartBtn();
-        productPage.waitForRemoveBtnToVisible();
         productPage.waitForAddToCartBtnToBeInVisible();
+        productPage.waitForRemoveBtnToVisible();
         int itemsCount = cartPage.getCartItemsNumber();
         Assert.assertEquals(itemsCount,1);
         cartPage.clickOnCartLink();
@@ -104,7 +104,7 @@ public class SeleniumGitCITests
         String username="standard_user";
         String password = "secret_sauce";
         String productName ="Sauce Labs Backpack";
-        ExtentTest test = extent.createTest("addItemsToCart", "verify adding items into cart");
+        ExtentTest test = extent.createTest("removeItemsToCart", "verify adding items into cart");
         ReportUtil.setTest(test);
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
